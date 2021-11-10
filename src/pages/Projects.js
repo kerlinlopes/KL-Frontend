@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 function Projects(props) {
-  // create state to hold projects
+// create state to hold projects
   const [projects, setProjects] = useState(null);
 
   //create function to make api call
@@ -21,13 +21,14 @@ function Projects(props) {
   const loaded = () => {
     return projects.map((project) => (
       <div>
-        <h1>{project.name}</h1>
-        <img src={project.image} alt="" />
+        <h1 className="Project-name">{project.name}</h1>
+        <img src={project.image} className="image" alt="" /> 
+        <br/>
         <a href={project.git}>
-          <button>Github</button>
+          <button className="Github">GITHUB</button>
         </a>
         <a href={project.live}>
-          <button>LIVE</button>
+          <button className="Live">LIVE</button>
         </a>
       </div>
     ));
